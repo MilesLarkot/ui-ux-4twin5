@@ -3,14 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}", "./public/*.html"],
   theme: {
     extend: {
-      colors: {
-        primary: "#1A3D64",
-        secondary: "#0C2B4E",
-        accent: "#1D546C",
-        neutrallight: "#F4F4F4",
-        neutraldark: "#454545",
+      fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+     colors: {
+        primary: "#0f172a",
+        teal: {
+          600: "#1D546C",  // Ta couleur exacte
+          700: "#163d52",  // Hover un peu plus foncé
+        },
       },
-    },
   },
   plugins: [],
-};
+}
+}
