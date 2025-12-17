@@ -1,0 +1,31 @@
+body {
+  background-color: var(--color-neutrallight);
+  font-family: var(--font-sans);
+}
+
+.navbar {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.hero-home {
+  background-image: url("../../assets/heroimg.png");
+  background-size: cover;
+  position: absolute;
+  height: 365px;
+  width: 100%;
+  z-index: -10;
+}

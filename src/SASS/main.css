@@ -1,0 +1,160 @@
+/* ================================
+   Variables & Base
+================================ */
+:root {
+  --color-primary: #1a3d64;
+  --color-secondary: #0c2b4e;
+  --color-accent: #1d546c;
+  --color-neutrallight: #f4f4f4;
+  --color-neutraldark: #454545;
+  --font-sans: "Open Sans", sans-serif;
+  --font-display: "Poppins", sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.text-h2 {
+  font-size: 32px;
+  line-height: 1;
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.text-body {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: var(--font-sans);
+}
+
+.text-caption {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+body {
+  background-color: var(--color-neutrallight);
+  font-family: var(--font-sans);
+}
+
+.navbar {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.hero-home {
+  background-image: url("../../assets/heroimg.png");
+  background-size: cover;
+  position: absolute;
+  height: 365px;
+  width: 100%;
+  z-index: -10;
+}
+
+/* ================================
+   Components
+================================ */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.steps .step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-neutraldark);
+}
+.steps .step.active {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+.steps .step .number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 12px;
+  color: var(--color-neutraldark);
+}
+.form-group input {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.photo-upload {
+  border: 2px dashed #cfcfcf;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+.photo-upload .circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-upload p {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/*# sourceMappingURL=main.css.map */
