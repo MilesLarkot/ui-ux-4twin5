@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+.header {
+  background-color: $primary;
+}
+
+.footer {
+  background-color: $secondary;
+}
+
+.sidebar {
+  background: white;
+  border-radius: $radius-lg;
+}

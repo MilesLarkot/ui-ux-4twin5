@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+.feedback-card {
+  background: #f9fafb;
+  border-radius: $radius-lg;
+  padding: 20px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: white;
+  padding: 10px 24px;
+  border-radius: $radius-md;
+}
+
+.bar {
+  @apply w-16 rounded-t-2xl from-primary to-accent bg-gradient-to-t;
+}
