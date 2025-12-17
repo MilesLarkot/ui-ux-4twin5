@@ -9,7 +9,7 @@
     "build:sass": "sass ./src/sass/main.scss ./public/main.css --style=compressed",
     "watch:css": "npm run watch:tailwind & npm run watch:sass",
     "watch:tailwind": "tailwindcss -i ./src/style.css -o ./public/style.css --watch",
-    "watch:sass": "sass ./src/sass/main.scss ./public/main.css --watch" 
+    "watch:sass": "sass ./src/sass/main.scss ./public/main.css --watch"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.6",
     "sass": "^1.97.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "3.4"
   }
-  
 }
