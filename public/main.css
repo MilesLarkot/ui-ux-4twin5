@@ -1,0 +1,41 @@
+.header {
+  background-color: #1a3d64;
+}
+
+.footer {
+  background-color: #0c2b4e;
+}
+
+.sidebar {
+  background: white;
+  border-radius: 14px;
+}
+
+.feedback-card {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+.feedback-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  background-color: #1a3d64;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+.bar {
+  @apply w-16 rounded-t-2xl from-primary to-accent bg-gradient-to-t;
+}
+
+.feedback-page {
+  min-height: 100vh;
+  background-color: #eef4fb;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback History</title>
+
+  <head>
+  <!-- Tailwind first -->
+  <link rel="stylesheet" href="style.css">  <!-- this now points to public/style.css -->
+  
+  <!-- Custom Sass styles second (so they override Tailwind if needed) -->
+  <link rel="stylesheet" href="main.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+</head>
+
+<body class="feedback-page font-sans text-neutraldark">
+
+  <!-- ================= HEADER ================= -->
+  <header class="header text-white">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-2 font-display text-xl">
+        <img src="assets/logo.svg" alt="Logo" class="w-6 h-6">
+        <a href="./index.html">InternEase </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="flex gap-6 text-sm">
+        <a href="#" class="hover:underline">Internships</a>
+        <a href="#" class="hover:underline">Overview</a>
+        <a href="#" class="hover:underline">CV Builder</a>
+        <a href="#" class="hover:underline">Dashboard</a>
+      </nav>
+
+      <a href="#" class="text-sm hover:underline">Sign out</a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="max-w-7xl mx-auto px-6 py-10">
+
+    <h1 class="text-h1 text-center text-primary mb-10">
+      Feedback History
+    </h1>
+
+    <div class="grid grid-cols-12 gap-8">
+
+      <!-- ===== LEFT SIDEBAR ===== -->
+      <aside class="sidebar col-span-3 p-6 shadow-sm space-y-6">
+
+        <!-- Stats -->
+        <div>
+          <h3 class="font-display text-lg mb-4">Statistics</h3>
+
+          <p class="flex items-center gap-2">
+            ⭐ <span class="font-semibold">4.8</span> Average Rating
+          </p>
+
+          <p class="flex items-center gap-2 text-red-600 mt-2">
+            ⚠️ <span class="font-semibold">5</span> Reported Issues
+          </p>
+
+          <div class="mt-4">
+            <p class="text-caption mb-1">Overall Satisfaction</p>
+            <div class="w-full h-2 bg-gray-200 rounded-full">
+              <div class="h-2 bg-accent rounded-full w-4/5"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div>
+          <h3 class="font-display text-lg mb-3">Filters</h3>
+
+          <input
+            type="text"
+            placeholder="Search feedback..."
+            class="w-full border rounded-lg px-3 py-2 text-sm"
+          />
+
+          <div class="mt-4 flex items-center gap-2 text-sm">
+            <input type="checkbox" checked>
+            <span>All Ratings</span>
+          </div>
+
+          <div class="mt-2 flex items-center gap-2 text-sm">
+            <input type="checkbox">
+            <span>5 Stars Only</span>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ===== RIGHT CONTENT ===== -->
+      <section class="col-span-9 bg-white rounded-xl p-8 shadow-sm">
+
+        <div class="space-y-6">
+
+          <!-- FEEDBACK ITEM 1 -->
+          <div class="feedback-card flex gap-4">
+            <img src="assets/Ellipse 5.png" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="font-semibold">Samantha Lee</p>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
+              </div>
+              <p class="text-body text-gray-600 mt-1">
+                The real-life examples were very helpful and easy to understand.
+              </p>
+            </div>
+          </div>
+
+          <!-- FEEDBACK ITEM 2 -->
+          <div class="feedback-card flex gap-4">
+            <img src="assets/Ellipse 5.png" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="font-semibold">Samantha Lee</p>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
+              </div>
+              <p class="text-body text-gray-600 mt-1">
+                Very professional platform and great internship recommendations.
+              </p>
+            </div>
+          </div>
+
+          <!-- FEEDBACK ITEM 3 -->
+          <div class="feedback-card flex gap-4">
+            <img src="assets/Ellipse 5.png" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="font-semibold">Samantha Lee</p>
+                <span class="text-yellow-500 text-sm">★★★★☆</span>
+              </div>
+              <p class="text-body text-gray-600 mt-1">
+                Good experience overall, but I would like more internship choices.
+              </p>
+            </div>
+          </div>
+
+          <!-- FEEDBACK ITEM 4 -->
+          <div class="feedback-card flex gap-4">
+            <img src="assets/Ellipse 5.png" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="font-semibold">Samantha Lee</p>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
+              </div>
+              <p class="text-body text-gray-600 mt-1">
+                Smooth navigation and very clear dashboard design.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ACTION BUTTON -->
+        <div class="flex justify-end mt-8">
+  <button class="btn-primary" onclick="window.location.href='FeedbackAnalytics.html'">
+    View Analytics
+  </button>
+</div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div class="h-[120px] bg-secondary text-white text-caption pt-[25px] px-10">
+      <div class="flex justify-between mb-5">
+        <p class="text-h2">InternEase</p>
+        <div class="flex">
+          <img src="assets/phone.png" alt="phone" />
+          <img src="assets/instagram.png" alt="instagram" />
+          <img src="assets/facebook.png" alt="facebook" />
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-5">
+          <p>Privacy Policy</p>
+          <p>|</p>
+          <p>Our History</p>
+          <p>|</p>
+          <p>What We Do</p>
+        </div>
+        <p>2025 All rights reserved</p>
+      </div>
+    </div>
+
+</body>
+</html>

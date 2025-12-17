@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Analytics - InternEase</title>
+
+  <!-- Tailwind first -->
+  <link rel="stylesheet" href="style.css"> <!-- points to public/style.css -->
+
+  <!-- Custom Sass styles second -->
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="feedback-page font-sans text-neutraldark bg-neutrallight min-h-screen flex flex-col">
+
+  <!-- ================= HEADER ================= -->
+  <header class="header text-white">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2 font-display text-xl">
+        <img src="assets/logo.svg" alt="Logo" class="w-6 h-6">
+        <a href="./index.html">InternEase </a>
+      </div>
+      <!-- Navigation -->
+      <nav class="space-x-8 text-sm">
+        <a href="#" class="hover:underline">Internships</a>
+        <a href="#" class="hover:underline">Overview</a>
+        <a href="#" class="hover:underline">CV Builder</a>
+        <a href="#" class="hover:underline">Dashboard</a>
+      </nav>
+
+      <a href="#" class="text-sm hover:underline">Sign out</a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="flex-1 max-w-6xl mx-auto px-6 py-10">
+
+    <!-- Breadcrumb -->
+    <a href="feedbackhistory.html" class="text-sm text-gray-600 hover:underline">&lt; Your previous Feedbacks</a>
+
+    <!-- Page Title -->
+    <h2 class="text-h1 text-center text-primary mt-4 mb-12">Feedback Analytics</h2>
+
+    <!-- Chart Card -->
+    <div class="bg-white rounded-3xl shadow-sm p-8 mb-12">
+      <h3 class="text-center font-display font-bold text-lg mb-10">Ratings per Internship</h3>
+
+      <div class="flex items-end justify-around h-64 px-4">
+        <!-- Lenovo -->
+        <div class="flex flex-col items-center">
+          <span class="text-base font-bold text-primary mb-2">3.0</span>
+          <div class="w-16 h-32 bg-gradient-to-t from-primary to-accent rounded-t-2xl"></div>
+          <span class="mt-6 text-sm text-gray-600">Lenovo</span>
+        </div>
+
+        <!-- Dell -->
+        <div class="flex flex-col items-center">
+          <span class="text-base font-bold text-primary mb-2">2.5</span>
+          <div class="w-16 h-28 bg-gradient-to-t from-primary to-accent rounded-t-2xl"></div>
+          <span class="mt-6 text-sm text-gray-600">Dell</span>
+        </div>
+
+        <!-- HP -->
+        <div class="flex flex-col items-center">
+          <span class="text-base font-bold text-primary mb-2">2.0</span>
+          <div class="w-16 h-24 bg-gradient-to-t from-primary to-accent rounded-t-2xl"></div>
+          <span class="mt-6 text-sm text-gray-600">HP</span>
+        </div>
+
+        <!-- Amazon -->
+        <div class="flex flex-col items-center">
+          <span class="text-base font-bold text-primary mb-2">3.5</span>
+          <div class="w-16 h-36 bg-gradient-to-t from-primary to-accent rounded-t-2xl"></div>
+          <span class="mt-6 text-sm text-gray-600">Amazon</span>
+        </div>
+
+        <!-- Nvidia -->
+        <div class="flex flex-col items-center">
+          <span class="text-base font-bold text-primary mb-2">4.5</span>
+<div class="w-16 h-32 rounded-t-2xl bg-gradient-to-t from-[#1a3d64] to-[#1d546c]"></div>
+          <span class="mt-6 text-sm text-gray-600">Nvidia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+  <!-- Average Rating -->
+  <div class="bg-white rounded-3xl shadow-sm p-8 text-center">
+    <div class="mb-4">
+      <img src="assets/blue_star.png" alt="Star" class="mx-auto w-12 h-12">
+    </div>
+    <p class="text-4xl font-bold text-primary">4.2<span class="text-2xl">/5</span></p>
+    <p class="text-gray-600 mt-4">Note Moyenne</p>
+  </div>
+
+  <!-- Total Feedbacks -->
+  <div class="bg-white rounded-3xl shadow-sm p-8 text-center">
+    <div class="mb-4">
+      <img src="assets/comment.png" alt="Comment" class="mx-auto w-12 h-12">
+    </div>
+    <p class="text-4xl font-bold text-primary">9</p>
+    <p class="text-gray-600 mt-4">Total des Feedbacks</p>
+  </div>
+
+  <!-- Average Duration -->
+  <div class="bg-white rounded-3xl shadow-sm p-8 text-center">
+    <div class="mb-4">
+      <img src="assets/timer.png" alt="Timer" class="mx-auto w-12 h-12">
+    </div>
+    <p class="text-4xl font-bold text-primary">8</p>
+    <p class="text-gray-600 mt-4">Durée Moyenne (Semaines)</p>
+  </div>
+
+</div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <div class="h-[120px] bg-secondary text-white text-caption pt-[25px] px-10">
+      <div class="flex justify-between mb-5">
+        <p class="text-h2">InternEase</p>
+        <div class="flex">
+          <img src="assets/phone.png" alt="phone" />
+          <img src="assets/instagram.png" alt="instagram" />
+          <img src="assets/facebook.png" alt="facebook" />
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-5">
+          <p>Privacy Policy</p>
+          <p>|</p>
+          <p>Our History</p>
+          <p>|</p>
+          <p>What We Do</p>
+        </div>
+        <p>2025 All rights reserved</p>
+      </div>
+    </div>
+
+</body>
+</html>

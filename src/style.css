@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
+
+
+
+:root {
   --color-primary: #1a3d64;
   --color-secondary: #0c2b4e;
   --color-accent: #1d546c;
