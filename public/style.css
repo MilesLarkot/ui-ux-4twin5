@@ -1289,6 +1289,209 @@ video {
   text-decoration-line: underline;
 }
 
+/* ====== Styles CV Builder & Feedback Form (fusionnés depuis cv-builder.css) ====== */
+
+:root {
+  --color-primary: #1a3d64;
+  --color-secondary: #0c2b4e;
+  --color-accent: #1d546c;
+  --color-neutrallight: #f4f4f4;
+  --color-neutraldark: #454545;
+  --font-sans: "Open Sans", sans-serif;
+  --font-display: "Poppins", sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* Feedback form layout */
+.feedback-wrapper {
+  max-width: 960px;
+  margin: 40px auto 64px auto;
+  padding: 0 24px;
+}
+
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+
+.feedback-sidebar {
+  background-color: var(--color-primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-image-box {
+  background-color: #0f5ed7;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.feedback-sidebar .text-caption {
+  color: #e8f3ff;
+  max-width: 240px;
+}
+
+.rating-row-top,
+.rating-row-bottom {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* CV Builder layout */
+.cv-wrapper {
+  max-width: 960px;
+  margin: 40px auto 64px auto;
+}
+
+.cv-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 40px;
+  align-items: flex-start;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.steps .step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-neutraldark);
+}
+
+.steps .step.active {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.steps .step .number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 12px;
+  color: var(--color-neutraldark);
+}
+
+.form-group input {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-group select,
+.form-group textarea {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-group textarea {
+  min-height: 96px;
+}
+
+.form-group input#score {
+  width: 80px;
+}
+
+.photo-upload {
+  border: 2px dashed #cfcfcf;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.photo-upload .circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-upload p {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background-color: white;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 @media (min-width: 640px) {
   .sm\:block {
     display: block;

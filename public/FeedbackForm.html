@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>InternEase – Feedback Form</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind + styles principaux -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg-[#DFF1FD] font-sans">
+    <!-- ================= NAVBAR ================= -->
+    <header
+      class="h-[57px] w-full bg-primary flex justify-between items-center text-neutrallight px-6 py-[15px]"
+    >
+      <a class="flex gap-2.5 cursor-pointer" href="index.html">
+        <img src="./assets/Logo.svg" alt="InternEase" />
+        <p class="font-bold">InternEase</p>
+      </a>
+      <nav>
+        <ul class="hidden sm:flex gap-x-3.5 text-sm">
+          <li class="cursor-pointer">
+            <a href="internship-details.html">Internships</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="overviews.html">Overview</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="CVBuilder.html">CV Builder</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="underline cursor-pointer hidden sm:block text-sm">Sign out</p>
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+    <section class="mt-10 text-center">
+      <h1 class="text-h2 text-primary font-display">Feedback Form</h1>
+    </section>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="feedback-wrapper">
+      <div class="feedback-card grid grid-cols-3 gap-0">
+        <!-- Colonne gauche -->
+        <aside
+          class="feedback-sidebar col-span-1 text-white flex flex-col items-center justify-center px-8 py-16"
+        >
+          <div
+            class="feedback-image-box w-[220px] h-[220px] flex items-center justify-center mb-8"
+          >
+            <img
+              src="./assets/feedback.png"
+              alt="We want your feedback"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <p class="text-caption text-center">
+            Votre expérience nous est précieuse pour améliorer notre plateforme
+            et aider les futurs stagiaires.
+          </p>
+        </aside>
+
+        <!-- Colonne droite : formulaire -->
+        <section class="col-span-2 bg-white px-10 py-10">
+          <div class="space-y-6">
+            <!-- Catégorie -->
+            <div class="form-group">
+              <label for="category">Catégorie de Feedback</label>
+              <select
+                id="category"
+                class="border border-[#dcdcdc] rounded-md px-3 py-2 text-sm"
+              >
+                <option>Choisissez un sujet</option>
+                <option>Plateforme</option>
+                <option>Processus de candidature</option>
+                <option>Offres de stage</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <!-- Question 1 -->
+            <div class="form-group">
+              <label for="q1">Qu’avez-vous le plus aimé dans votre stage ?</label>
+              <textarea
+                id="q1"
+                rows="3"
+                placeholder="Partagez votre expérience positive..."
+                class="border border-[#dcdcdc] rounded-md px-3 py-2 text-sm resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="form-group">
+              <label for="q2">Que pouvons-nous améliorer ?</label>
+              <textarea
+                id="q2"
+                rows="3"
+                placeholder="Vos suggestions..."
+                class="border border-[#dcdcdc] rounded-md px-3 py-2 text-sm resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Note expérience -->
+            <div class="form-group">
+              <label>Notez votre expérience de stage</label>
+              <div class="mt-2 space-y-2 text-sm">
+                <div class="rating-row-top">
+                  <label for="rate1" class="flex items-center gap-2">
+                    <input type="radio" id="rate1" name="experience" />
+                    <span>1 - Poor</span>
+                  </label>
+                  <label for="rate2" class="flex items-center gap-2">
+                    <input type="radio" id="rate2" name="experience" />
+                    <span>2 - Fair</span>
+                  </label>
+                  <label for="rate3" class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      id="rate3"
+                      name="experience"
+                      checked
+                    />
+                    <span>3 - Good</span>
+                  </label>
+                  <label for="rate4" class="flex items-center gap-2">
+                    <input type="radio" id="rate4" name="experience" />
+                    <span>4 - Very Good</span>
+                  </label>
+                </div>
+                <div class="rating-row-bottom">
+                  <label for="rate5" class="flex items-center gap-2">
+                    <input type="radio" id="rate5" name="experience" />
+                    <span>5 - Excellent</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Score sur 10 -->
+            <div class="form-group">
+              <label for="score">Score sur 10 (Recommandation)</label>
+              <input
+                id="score"
+                type="number"
+                min="0"
+                max="10"
+                value="8"
+                class="w-20"
+              />
+              <p class="text-caption text-[#c0392b] mt-1">
+                Une note élevée augmente la visibilité du stage.
+              </p>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label for="date">Date de Soumission</label>
+              <input id="date" type="date" />
+            </div>
+          </div>
+
+          <!-- Boutons -->
+          <div class="flex justify-end gap-4 mt-8">
+            <a href="CVBuilder.html" class="btn-outline inline-block text-center">
+              &lt; Précédent
+            </a>
+            <button class="btn-primary">Soumettre</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      © 2025 InternEase. All rights reserved.
+    </footer>
+  </body>
+</html>
+
+
