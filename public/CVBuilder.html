@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>InternEase – CV Builder</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind + styles principaux -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-neutrallight font-sans">
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar h-[57px] w-full bg-primary flex justify-between items-center text-neutrallight px-6 py-[15px]">
+  <a class="flex gap-2.5 cursor-pointer" href="index.html">
+    <img src="./assets/Logo.svg" alt="InternEase" />
+    <p class="font-bold">InternEase</p>
+  </a>
+  <nav>
+    <ul class="hidden sm:flex gap-x-3.5 text-sm">
+      <li class="cursor-pointer"><a href="internship-details.html">Internships</a></li>
+      <li class="cursor-pointer"><a href="overviews.html">Overview</a></li>
+      <li class="cursor-pointer font-semibold border-b-2 border-neutrallight pb-0.5">
+        <a href="CVBuilder.html">CV Builder</a>
+      </li>
+      <li class="cursor-pointer"><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+  <p class="underline cursor-pointer hidden sm:block text-sm">Sign out</p>
+</header>
+
+<!-- ================= PAGE TITLE ================= -->
+<section class="page-title">
+  <h2 class="text-h2 text-primary mt-10">CV &amp; Cover Letter Builder</h2>
+</section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="cv-wrapper">
+
+  <div class="card cv-card">
+
+    <!-- ===== STEPS ===== -->
+    <aside class="steps">
+      <div class="step active">
+        <span class="number">1</span>
+        <span>Personal Info</span>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <span>Experience</span>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <span>Education</span>
+      </div>
+      <div class="step">
+        <span>4</span>
+        <span>Skills</span>
+      </div>
+    </aside>
+
+    <!-- ===== FORM ===== -->
+    <section class="grid grid-cols-2 gap-6">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your full name">
+      </div>
+
+      <!-- PHOTO -->
+      <div class="photo-upload row-span-3 flex flex-col items-center justify-center">
+        <p class="font-semibold mb-2 text-sm">Photo de Profil (Optionnel)</p>
+        <div class="circle">
+          📷
+        </div>
+        <button type="button" class="mt-4 text-primary text-sm font-semibold flex items-center gap-2">
+          <span>Uploader une image</span>
+        </button>
+        <p class="text-neutraldark text-caption mt-2">JPG, PNG (max 5MB)</p>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" placeholder="+216 00 000 000">
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="example@domain.com">
+      </div>
+
+      <div class="form-group">
+        <label for="linkedin">LinkedIn</label>
+        <input id="linkedin" type="text" placeholder="linkedin.com/in/yourprofile">
+      </div>
+
+      <!-- ===== ACTIONS ===== -->
+      <div class="col-span-2 flex justify-end gap-4 mt-6">
+        <button class="btn-outline">Back</button>
+        <a href="FeedbackForm.html" class="btn-primary inline-block text-center">Next</a>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer mt-16">
+  © 2025 InternEase. All rights reserved.
+</footer>
+
+</body>
+</html>
