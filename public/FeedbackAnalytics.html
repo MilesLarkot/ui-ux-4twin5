@@ -18,24 +18,81 @@
 <body class="feedback-page font-sans text-neutraldark bg-neutrallight min-h-screen flex flex-col">
 
   <!-- ================= HEADER ================= -->
-  <header class="header text-white">
-    <div class=" mx-auto flex items-center justify-between px-6 py-4">
-
-      <!-- Logo -->
-      <div class="flex items-center gap-2 font-display text-xl">
-        <img src="assets/logo.svg" alt="Logo" class="w-6 h-6">
-        <a href="./index.html">InternEase </a>
+<!-- navbar -->
+    <div
+      class="h-[57px] w-full bg-primary flex justify-between items-center text-neutrallight px-6 py-[15px]"
+    >
+      <a class="flex gap-2.5 cursor-pointer" href="index.html">
+        <svg
+          width="32"
+          height="20"
+          viewBox="0 0 32 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M25.4103 16.5507L15.7526 20L6.24838 16.5507V9.89081L15.7526 13.3401L25.4103 9.89081V16.5507Z"
+            fill="white"
+          />
+          <path
+            d="M32 5.83784L15.872 11.5979L0 5.83784L15.9483 0L32 5.83784Z"
+            fill="white"
+          />
+        </svg>
+        <p class="font-bold" href="index.html">InternEase</p>
+      </a>
+      <div>
+        <ul class="hidden sm:flex gap-x-3.5">
+          <li class="cursor-pointer">
+            <a href="internship-details.html">Internships</a>
+          </li>
+          <li class="cursor-pointer"><a href="overviews.html">Overviews</a></li>
+          <li class="cursor-pointer">
+            <a href="CVBuilder.html">CV Builder</a>
+          </li>
+          <li class="cursor-pointer"><a href="dashboard.html">Dashboard</a></li>
+        </ul>
       </div>
-      <!-- Navigation -->
-      <nav class="space-x-8 text-sm">
-        <a href="#" class="hover:underline">Internships</a>
-        <a href="#" class="hover:underline">Overview</a>
-        <a href="#" class="hover:underline">CV Builder</a>
-        <a href="#" class="hover:underline">Dashboard</a>
-      </nav>
+      <p class="underline cursor-pointer hidden sm:block">Sign out</p>
+      <svg
+        width="32px"
+        height="32px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="sm:hidden"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-      <a href="#" class="text-sm hover:underline">Sign out</a>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 18L20 18"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 12L20 12"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 6L20 6"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
     </div>
+    <!-- hero -->
   </header>
 
   <!-- ================= MAIN ================= -->
