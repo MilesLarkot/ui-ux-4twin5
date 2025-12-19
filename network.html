@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>InternEase Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-[#0f2a44] text-white px-10 py-4 flex justify-between items-center">
+  <div class="font-bold text-lg">InternEase</div>
+  <nav class="space-x-6 text-sm">
+    <a href="#">Internships</a>
+    <a href="#">Overview</a>
+    <a href="#">CV Builder</a>
+    <a href="dashboard.html" class="font-semibold underline">Dashboard</a>
+
+  </nav>
+  <a href="#" class="text-sm">Sign out</a>
+</header>
+
+<!-- HERO / BACKGROUND SECTION -->
+<section
+  class="relative w-full bg-cover bg-center bg-no-repeat py-24"
+  style="background-image: url('imgs/network.jpg');"
+>
+  <div class="absolute inset-0 bg-white/40"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <h1 class="text-2xl font-bold mb-1 text-center">Your Network Dashboard</h1>
+    <p class="text-sm text-gray-600 text-center">
+      Manage requests, match profiles and discover events
+    </p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-12 gap-10">
+
+  <!-- LEFT COLUMN -->
+  <div class="col-span-5 space-y-10">
+
+    <!-- REQUESTS -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-bold mb-1">See requests</h2>
+      <p class="text-sm text-gray-600 mb-6">Reach out to more people to grow !</p>
+
+      <div class="relative mb-6">
+        <input type="text" placeholder="Search" class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm" />
+        <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+      </div>
+
+      <div class="space-y-5">
+        <!-- ITEM -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=3" class="w-10 h-10 rounded-full" />
+            <p class="text-sm font-medium">Youssef Toumi</p>
+          </div>
+          <div class="text-xs space-x-3">
+            <button class="text-green-600">Accept</button>
+            <button class="text-red-500">Delete</button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=5" class="w-10 h-10 rounded-full" />
+            <p class="text-sm font-medium">Ahmed Dridi</p>
+          </div>
+          <div class="text-xs space-x-3">
+            <button class="text-green-600">Accept</button>
+            <button class="text-red-500">Delete</button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=8" class="w-10 h-10 rounded-full" />
+            <p class="text-sm font-medium">Nouha Ben Massoud</p>
+          </div>
+          <div class="text-xs space-x-3">
+            <button class="text-green-600">Accept</button>
+            <button class="text-red-500">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATCHING -->
+    <section class="relative bg-white rounded-2xl shadow p-6 overflow-hidden"
+         style="background-image: url('imgs/question.png'); 
+                background-size: contain; 
+                background-repeat: no-repeat; 
+                background-position: center;">
+  
+  <!-- overlay -->
+  
+  <div class="relative z-10">
+    <h2 class="text-2xl font-bold mb-1">Matching profiles</h2>
+    <p class="text-sm text-gray-600 mb-6">Click left to skip, right to match</p>
+
+    <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
+  <button class="w-12 h-12 rounded-full bg-red-100 text-xl hover:bg-red-200">👎</button>
+
+  <div class="flex items-center justify-center flex-1 flex-col">
+    <img src="https://i.pravatar.cc/80?img=11" class="w-24 h-24 rounded-full object-cover" />
+    <p class="mt-4 text-center text-sm font-semibold text-gray-700">
+      aziz aziz
+    </p>
+  </div>
+
+  <button class="w-12 h-12 rounded-full bg-green-100 text-xl hover:bg-green-200">👍</button>
+</div>
+
+
+    
+  </div>
+</section>
+
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="col-span-1 flex justify-center">
+    <div class="w-px bg-gray-300"></div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="col-span-6">
+    <section class="bg-white rounded-2xl shadow p-8">
+      <h2 class="text-2xl font-bold mb-1">Event recommendations</h2>
+      <p class="text-sm text-gray-600 mb-8">Personalized events, just for you.</p>
+
+      <div class="space-y-6">
+        <!-- EVENT CARD -->
+        <div class="flex items-center bg-[#143a63] text-white rounded-xl overflow-hidden">
+          <div class="w-20 h-20 bg-blue-900 flex items-center justify-center">📷</div>
+          <div class="p-4 flex-1">
+            <p class="font-medium">Team building recent</p>
+            <p class="text-xs opacity-80">Date · Place</p>
+          </div>
+          <button class="px-2 py-2 bg-white text-[#143a63] rounded-l-xl hover:bg-gray-100">→</button>
+          
+        </div>
+
+        <div class="flex items-center bg-[#143a63] text-white rounded-xl overflow-hidden">
+          <div class="w-20 h-20 bg-blue-900 flex items-center justify-center">📷</div>
+          <div class="p-4 flex-1">
+            <p class="font-medium">Workshop integration</p>
+            <p class="text-xs opacity-80">Date · Place</p>
+          </div>
+          <button class="px-2 py-2 bg-white text-[#143a63] rounded-l-xl hover:bg-gray-100">→</button>
+        </div>
+
+        <div class="flex items-center bg-[#143a63] text-white rounded-xl overflow-hidden">
+          <div class="w-20 h-20 bg-blue-900 flex items-center justify-center">📷</div>
+          <div class="p-4 flex-1">
+            <p class="font-medium">Visit places</p>
+            <p class="text-xs opacity-80">Date · Place</p>
+          </div>
+          <button class="px-2 py-2 bg-white text-[#143a63] rounded-l-xl hover:bg-gray-100">→</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-[#0f2a44] text-white text-center py-12">
+  <p class="font-semibold mb-2">Ready to find your ideal internship?</p>
+  <p class="text-xs mb-4 opacity-90">Join the thousands of students who have already landed their internships with InternEase.</p>
+  <button class="bg-white text-[#0f2a44] px-6 py-2 rounded text-sm font-medium">Create an Account</button>
+  <p class="text-xs mt-6 opacity-60">© 2025 InternEase. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
