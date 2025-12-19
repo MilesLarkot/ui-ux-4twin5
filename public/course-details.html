@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Details</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="h-[57px] w-full bg-primary flex justify-between items-center text-neutrallight px-6 py-[15px]"
+    >
+      <a class="flex gap-2.5 cursor-pointer" href="index.html">
+        <svg
+          width="32"
+          height="20"
+          viewBox="0 0 32 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M25.4103 16.5507L15.7526 20L6.24838 16.5507V9.89081L15.7526 13.3401L25.4103 9.89081V16.5507Z"
+            fill="white"
+          />
+          <path
+            d="M32 5.83784L15.872 11.5979L0 5.83784L15.9483 0L32 5.83784Z"
+            fill="white"
+          />
+        </svg>
+        <p class="font-bold">InternEase</p>
+      </a>
+      <div>
+        <ul class="hidden sm:flex gap-x-3.5">
+          <li class="cursor-pointer underline">
+            <a href="internships.html">Internships</a>
+          </li>
+          <li class="cursor-pointer"><a href="overviews.html">Overviews</a></li>
+          <li class="cursor-pointer">CV Builder</li>
+          <li class="cursor-pointer">Dashboard</li>
+        </ul>
+      </div>
+      <p class="underline cursor-pointer hidden sm:block">Sign out</p>
+      <svg
+        width="32px"
+        height="32px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="sm:hidden"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 18L20 18"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 12L20 12"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 6L20 6"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
+    </div>
+    <div class="py-2.5 space-y-[34px] mx-[70px]">
+      <div class="flex px-4 py-2 gap-2.5 text-primary">
+        <p>v</p>
+        <p>Back to internships</p>
+      </div>
+      <div
+        class="p-10 space-y-[84px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] bg-white"
+      >
+        <div class="flex gap-5">
+          <div
+            class="max-w-[77px] h-[77px] aspect-square bg-primary grid place-items-center rounded"
+          >
+            <p class="text-white text-[24px] font-semibold">TS</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <p class="text-h1 wrap-anywhere font-display">
+              TypeScript: The Complete Developer's Guide
+            </p>
+            <p class="text-caption font-display">
+              Master TypeScript by learning types, classes, interfaces, generics
+              and integrating with React, Express, and more. Build
+              production-ready applications.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-2.5">
+          <div class="bg-[#D97252] rounded-[20px] px-[22px] py-[9px]">
+            <p class="text-white font-sans font-semibold text-[12px]">
+              Priority for NovaTech
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="p-10 flex flex-col gap-5 drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] bg-white"
+      >
+        <img
+          class="w-full aspect-video rounded-[10px] relative overflow-hidden cursor-pointer"
+          src="./assets/vid.png"
+        />
+        <div class="font-bold">
+          <p>📺 24 hours on-demand video</p>
+          <p>📄 12 articles</p>
+          <p>💾 15 downloadable resources</p>
+          <p>📱 Access on mobile and TV</p>
+          <p>🏆 Certificate of completion</p>
+          <p>♾️ Full lifetime access</p>
+        </div>
+      </div>
+
+      <!-- details card -->
+      <div
+        class="p-10 drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] bg-white space-y-[43px]"
+      >
+        <!-- description -->
+        <div class="flex flex-col gap-[27px]">
+          <!-- title 1 -->
+          <div class="flex gap-[10px]">
+            <div class="w-[10px] bg-secondary"></div>
+            <p class="text-h2">What You’ll Learn</p>
+          </div>
+          <!-- list 1 -->
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Understand and use TypeScript's type system effectively</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Build large-scale applications with confidence</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Integrate TypeScript with React for type-safe components</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Use interfaces, classes, and generics like a pro</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Master advanced types including unions and intersections</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Configure TypeScript compiler options for any project</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Write reusable, maintainable code with TypeScript</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Debug TypeScript applications efficiently</p>
+            </div>
+          </div>
+          <div class="flex gap-[10px]">
+            <div class="w-[10px] bg-secondary"></div>
+            <p class="text-h2">Requierements</p>
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Basic JavaScript knowledge required</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>
+                Understanding of ES6 features like arrow functions and
+                destructuring
+              </p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>
+                Familiarity with Node.js and NPM is helpful but not required
+              </p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>
+                No prior TypeScript experience needed - we start from scratch!
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-[10px]">
+            <div class="w-[10px] bg-secondary"></div>
+            <p class="text-h2">Description</p>
+          </div>
+          <p class="px-5">
+            TypeScript is a powerful superset of JavaScript that adds static
+            typing, making your code more robust and maintainable. This
+            comprehensive course will take you from TypeScript beginner to
+            expert, covering everything you need to build production-ready
+            applications. You'll learn by building real projects, including a
+            web framework similar to React, a full-stack application with
+            Express, and much more. Each concept is explained clearly with
+            practical examples you can apply immediately. By the end of this
+            course, you'll have the confidence to use TypeScript in any project,
+            whether you're building frontend applications with React, backend
+            services with Node.js, or full-stack applications.
+          </p>
+        </div>
+      </div>
+      <div
+        class="bg-gradient-to-br from-primary to-secondary rounded-[10px] p-8"
+      >
+        <p class="text-h1 text-white">95% Match for NovaTech Internship</p>
+      </div>
+
+      <div
+        class="p-10 drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] bg-white space-y-[43px]"
+      >
+        <div class="flex flex-col gap-[27px]">
+          <div class="flex gap-[10px]">
+            <div class="w-[10px] bg-secondary"></div>
+            <p class="text-h2">Why This Course?</p>
+          </div>
+
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Covers TypeScript required by NovaTech</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>React integration included</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Hands-on project experience</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Recently updated content</p>
+            </div>
+            <div class="flex gap-[10px] px-[10px]">
+              <div class="w-7 h-7 aspect-square">
+                <img src="./assets/check.png" alt="" />
+              </div>
+              <p>Lifetime access to materials</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="h-[120px] bg-secondary text-white text-caption pt-[25px] px-10 mt-[129px]"
+    >
+      <div class="flex justify-between mb-5">
+        <p class="text-h2">InternEase</p>
+        <div class="flex">
+          <img src="assets/phone.png" alt="phone" />
+          <img src="assets/instagram.png" alt="instagram" />
+          <img src="assets/facebook.png" alt="facebook" />
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-5">
+          <p>Privacy Policy</p>
+          <p>|</p>
+          <p>Our History</p>
+          <p>|</p>
+          <p>What We Do</p>
+        </div>
+        <p>2025 All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>

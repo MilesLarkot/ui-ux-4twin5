@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+  --color-primary: #1a3d64;
+  --color-secondary: #0c2b4e;
+  --color-accent: #1d546c;
+  --color-neutrallight: #f4f4f4;
+  --color-neutraldark: #454545;
+  --color-neutraldefault: #d9d9d9;
+
+  --font-sans: "Open Sans", sans-serif;
+  --font-display: "Poppins", sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.text-h2 {
+  font-size: 32px;
+  line-height: 1;
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.text-body {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-weight: normal;
+}
+
+.text-caption {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+.hero-home {
+  background-image: url("assets/heroimg.png");
+  background-size: cover;
+  position: absolute;
+  height: 365px;
+  width: 100%;
+  z-index: -10;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-neutrallight">
+    <!-- navbar -->
+    <div
+      class="h-[57px] w-full bg-primary flex justify-between items-center text-neutrallight px-6 py-[15px]"
+    >
+      <a class="flex gap-2.5 cursor-pointer" href="index.html">
+        <svg
+          width="32"
+          height="20"
+          viewBox="0 0 32 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M25.4103 16.5507L15.7526 20L6.24838 16.5507V9.89081L15.7526 13.3401L25.4103 9.89081V16.5507Z"
+            fill="white"
+          />
+          <path
+            d="M32 5.83784L15.872 11.5979L0 5.83784L15.9483 0L32 5.83784Z"
+            fill="white"
+          />
+        </svg>
+        <p class="font-bold" href="index.html">InternEase</p>
+      </a>
+      <div>
+        <ul class="hidden sm:flex gap-x-3.5">
+          <li class="cursor-pointer">
+            <a href="internships.html">Internships</a>
+          </li>
+          <li class="cursor-pointer"><a href="overviews.html">Overviews</a></li>
+          <li class="cursor-pointer">
+            <a href="CVBuilder.html">CV Builder</a>
+          </li>
+          <li class="cursor-pointer"><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <p class="underline cursor-pointer hidden sm:block">Sign out</p>
+      <svg
+        width="32px"
+        height="32px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="sm:hidden"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 18L20 18"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 12L20 12"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 6L20 6"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
+    </div>
+    <!-- hero -->
+    <div
+      class="relative h-[365px] grid drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+    >
+      <div class="hero-home"></div>
+      <div class="m-auto text-center">
+        <p class="text-h1 text-primary font-display">Welcome to InternEase</p>
+        <p class="text-body">
+          InternEase is a platform designed to simplify internship searching for
+          students and companies.
+        </p>
+        <p>We connect tomorrow’s talents with today’s opportunities.</p>
+      </div>
+      <div
+        class="absolute bg-white w-[408px] h-[97px] -bottom-12 left-0 right-0 mx-auto grid rounded-[118px] text-primary"
+      >
+        <div class="text-h1 m-auto">For students</div>
+      </div>
+    </div>
+    <div class="mt-[47px] px-[98px]">
+      <p class="mt-20 lg:mt-0">Students can benifit with:</p>
+      <div
+        class="flex items-center flex-col place-content-center lg:flex-row gap-[75px] mt-[46px]"
+      >
+        <div
+          class="w-[311px] h-[268px] rounded-3xl bg-primary text-center text-white font-semibold pt-[26px]"
+        >
+          <p>Seamless application</p>
+          <p>experience</p>
+          <img src="assets/experience.png" class="mx-auto" alt="experience" />
+        </div>
+        <div
+          class="w-[311px] h-[268px] rounded-3xl bg-primary text-center text-white font-semibold pt-[26px]"
+        >
+          <p class="mb-[41px]">Professional growth tools</p>
+          <img src="assets/growth.png" class="mx-auto" alt="growth" />
+        </div>
+        <div
+          class="w-[311px] h-[268px] rounded-3xl bg-primary text-center text-white font-semibold pt-[26px]"
+        >
+          <p>Personalized internship</p>
+          <p class="mb-5">matches</p>
+          <img src="assets/match.png" class="mx-auto" alt="match" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[#DFF1FD] text-secondary mt-[91px] w-full border h-[78px] border-primary relative"
+    >
+      <div
+        class="flex absolute left-0 right-0 place-content-center -top-[66px]"
+      >
+        <img src="assets/testomonials.png" alt="testomonials" width="210px" />
+        <p class="text-h1 my-auto">Testemonianls</p>
+      </div>
+    </div>
+    <div class="mt-[129px] px-[98px] mb-[91px]">
+      <div
+        class="flex items-center flex-col lg:flex-row place-content-center gap-[101px] mt-[46px]"
+      >
+        <div
+          class="w-[258px] h-[392px] rounded-3xl bg-primary text-white pt-[47px] relative"
+        >
+          <img
+            src="assets/fav.png"
+            class="absolute -right-3.5 -top-[17px]"
+            alt=""
+          />
+          <img src="assets/Ellipse 5.png" class="mx-auto mb-4" alt="pfp" />
+          <p class="mx-auto w-fit font-semibold mb-[33px]">Nour Qahman</p>
+          <div class="flex px-8 gap-[9px] mb-[30px]">
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+          </div>
+          <p class="mx-auto w-fit">“ The smart matching</p>
+          <p class="mx-auto w-fit">feature of InternEase is</p>
+          <p class="mx-auto w-fit mb-2.5">remarkable.”</p>
+          <p class="mx-auto w-fit underline">See more!</p>
+        </div>
+        <div
+          class="w-[258px] h-[392px] rounded-3xl bg-primary text-white pt-[47px] relative"
+        >
+          <img
+            src="assets/fav.png"
+            class="absolute -right-3.5 -top-[17px]"
+            alt=""
+          />
+          <img src="assets/Ellipse 5.png" class="mx-auto mb-4" alt="pfp" />
+          <p class="mx-auto w-fit font-semibold mb-[33px]">Nour Qahman</p>
+          <div class="flex px-8 gap-[9px] mb-[30px]">
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+          </div>
+          <p class="mx-auto w-fit">“ The smart matching</p>
+          <p class="mx-auto w-fit">feature of InternEase is</p>
+          <p class="mx-auto w-fit mb-2.5">remarkable.”</p>
+          <p class="mx-auto w-fit underline">See more!</p>
+        </div>
+        <div
+          class="w-[258px] h-[392px] rounded-3xl bg-primary text-white pt-[47px] relative"
+        >
+          <img
+            src="assets/fav.png"
+            class="absolute -right-3.5 -top-[17px]"
+            alt=""
+          />
+          <img src="assets/Ellipse 5.png" class="mx-auto mb-4" alt="pfp" />
+          <p class="mx-auto w-fit font-semibold mb-[33px]">Nour Qahman</p>
+          <div class="flex px-8 gap-[9px] mb-[30px]">
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/star.png" alt="star" srcset="" />
+            <img src="assets/semistar.png" alt="half a star" srcset="" />
+          </div>
+          <p class="mx-auto w-fit">“ The smart matching</p>
+          <p class="mx-auto w-fit">feature of InternEase is</p>
+          <p class="mx-auto w-fit mb-2.5">remarkable.”</p>
+          <p class="mx-auto w-fit underline">See more!</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-white text-center pt-9 pb-[52px]">
+      <p class="text-h2 mb-6">Ready to find your ideal internship?</p>
+      <p>
+        Join the thousands of students who have already landed their internships
+      </p>
+      <p class="mb-[71px]">
+        with InternEase. Register for free and start your search today !
+      </p>
+      <div
+        class="bg-secondary w-fit mx-auto px-5 py-[11px] text-white font-semibold font-sans rounded-sm drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+      >
+        Create an account
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="h-[120px] bg-secondary text-white text-caption pt-[25px] px-10">
+      <div class="flex justify-between mb-5">
+        <p class="text-h2">InternEase</p>
+        <div class="flex">
+          <img src="assets/phone.png" alt="phone" />
+          <img src="assets/instagram.png" alt="instagram" />
+          <img src="assets/facebook.png" alt="facebook" />
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-5">
+          <p>Privacy Policy</p>
+          <p>|</p>
+          <p>Our History</p>
+          <p>|</p>
+          <p>What We Do</p>
+        </div>
+        <p>2025 All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
