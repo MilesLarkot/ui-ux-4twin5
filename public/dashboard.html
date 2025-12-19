@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  .force-scrollbar {
+    overflow-x: scroll;
+  }
+</style>
+
+  <meta charset="UTF-8" />
+  <title>InternEase Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-[#0f2a44] text-white px-10 py-4 flex justify-between items-center">
+  <div class="font-bold text-lg">InternEase</div>
+  <nav class="space-x-6 text-sm">
+    <a href="index.html">Internships</a>
+    <a href="#">Overview</a>
+    <a href="#">CV Builder</a>
+    <a href="dashboard.html" class="font-semibold underline">Dashboard</a>
+
+  </nav>
+  <a href="#" class="text-sm">Sign out</a>
+</header>
+
+<!-- MAIN -->
+<main class="space-y-16 pb-20">
+
+  <!-- ================= PORTFOLIO ================= -->
+  <section
+    class="relative w-full bg-cover bg-center bg-no-repeat py-20"
+     style="background-image: url('imgs/portfolio.jpg');"
+    >
+    <!-- overlay -->
+    <div class="absolute inset-0 bg-white/30"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-2xl font-bold mb-1">Your portfolio</h1>
+      <p class="text-sm text-gray-600 mb-8">
+        Plant your projects here and let your portfolio grow !
+      </p>
+
+      <!-- scroll container -->
+      <div class="flex gap-14 overflow-x-auto px-2 md:justify-center">
+<button
+  onclick="scrollPortfolio(-200)"
+  class="hidden md:flex absolute left-7 top-2/3 -translate-y-1/2
+         w-10 h-10 items-center justify-center rounded-full
+         bg-white shadow hover:bg-gray-100 z-20"
+>
+  ‹
+</button>
+        <!-- CARD -->
+        <div class="bg-[#143a63] text-white rounded-xl w-48 p-4 flex-shrink-0 space-y-3">
+
+  <!-- Title -->
+  <p class="text-sm font-medium">Plateforme 2</p>
+
+  <!-- Progress label -->
+  <div class="flex justify-between text-xs opacity-80">
+    <span>Progress</span>
+    <span>33%</span>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="h-2 bg-white/30 rounded-full overflow-hidden">
+    <div class="h-2 w-1/3 bg-green-400 rounded-full"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="flex justify-between items-center text-xs">
+    <span class="opacity-70">3 / 9 tasks</span>
+    <span class="underline cursor-pointer hover:opacity-90">
+      See more
+    </span>
+  </div>
+
+</div>
+
+
+        <div class="bg-[#143a63] text-white rounded-xl w-48 p-4 flex-shrink-0 space-y-3">
+
+  <!-- Title -->
+  <p class="text-sm font-medium">Site FINEX</p>
+
+  <!-- Progress label -->
+  <div class="flex justify-between text-xs opacity-80">
+    <span>Progress</span>
+    <span>75%</span>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="h-2 bg-white/30 rounded-full overflow-hidden">
+    <div class="h-2 w-3/4 bg-purple-400 rounded-full"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="flex justify-between items-center text-xs">
+    <span class="opacity-70">9 / 12 tasks</span>
+    <span class="underline cursor-pointer hover:opacity-90">
+      See more
+    </span>
+  </div>
+
+</div>
+
+        <div class="bg-[#143a63] text-white rounded-xl w-48 p-4 flex-shrink-0 space-y-3">
+
+  <!-- Title -->
+  <p class="text-sm font-medium">Project SpringBoot</p>
+
+  <!-- Progress label -->
+  <div class="flex justify-between text-xs opacity-80">
+    <span>Progress</span>
+    <span>80%</span>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="h-2 bg-white/30 rounded-full overflow-hidden">
+    <div class="h-2 w-4/5 bg-blue-400 rounded-full"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="flex justify-between items-center text-xs">
+    <span class="opacity-70">8 / 10 tasks</span>
+    <span class="underline cursor-pointer hover:opacity-90">
+      See more
+    </span>
+  </div>
+
+</div>
+
+
+        <!-- ADD PROJECT -->
+        <div class="flex flex-col items-center justify-center text-sm flex-shrink-0">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white/70 backdrop-blur text-xl text-gray-700 hover:bg-white transition">
+            +
+          </div>
+          <p class="mt-2 text-gray-700">Add project</p>
+        </div>
+        <button
+  onclick="scrollPortfolio(200)"
+  class="hidden md:flex absolute right-7 top-2/3 -translate-y-1/2
+         w-10 h-10 items-center justify-center rounded-full
+         bg-white shadow hover:bg-gray-100 z-20"
+>
+  ›
+</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY & CONNECTIONS ================= -->
+  <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+    <!-- GALLERY -->
+    <div class="bg-white rounded-xl p-8 shadow">
+      <h1 class="text-2xl font-bold mb-1"> Gallery</h1>
+     <p class="text-sm text-gray-600 mb-8">
+        Your moments, our shared memories !
+      </p>
+
+<!-- TEAM BUILDINGS -->
+<div class="flex flex-col items-center mb-14">
+  <h2 class="text-sm font-medium mb-4 text-center">
+    Team buildings
+  </h2>
+
+  <div class="force-scrollbar pb-4 w-full flex justify-center">
+    <div class="flex gap-6 min-w-max">
+      <img src="imgs/team1.jpg" class="w-28 h-28 object-cover rounded-xl shadow-sm" />
+      <img src="imgs/team2.jpg" class="w-28 h-28 object-cover rounded-xl shadow-sm" />
+      <img src="imgs/team3.jpg" class="w-28 h-28 object-cover rounded-xl shadow-sm" />
+
+      <div
+        class="w-28 h-28 rounded-xl border-2 border-dashed
+               flex items-center justify-center text-gray-400 text-2xl">
+        +
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WORKSHOPS -->
+<div class="flex flex-col items-center">
+  <h3 class="text-sm font-medium mb-4 text-center">
+    Workshops
+  </h3>
+
+  <div class="force-scrollbar pb-4 w-full flex justify-center">
+    <div class="flex gap-6 min-w-max">
+      <img src="imgs/work1.jpg" class="w-28 h-28 object-cover rounded-xl shadow-sm" />
+      <img src="imgs/workshop2.jpg" class="w-28 h-28 object-cover rounded-xl shadow-sm" />
+      <div
+        class="w-28 h-28 rounded-xl border-2 border-dashed
+               flex items-center justify-center text-gray-400 text-2xl">
+        +
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    </div>
+
+    <!-- CONNECTIONS -->
+    <div class="bg-white rounded-xl p-8 shadow">
+      <h1 class="text-2xl font-bold mb-1">Connections</h1>
+      <p class="text-sm text-gray-600 mb-8">
+        Your personal hub for friend connections
+      </p>
+
+      <!-- DONUT CHART -->
+      <div class="relative w-52 h-52 mx-auto">
+        <div
+          class="w-full h-full rounded-full"
+          style="
+            background: conic-gradient(
+              #1e3a8a 0% 45%,
+              #3b82f6 45% 80%,
+              #93c5fd 80% 100%
+            );
+          "
+        ></div>
+
+        <div class="absolute inset-6 bg-white rounded-full flex items-center justify-center">
+          <div class="text-center">
+            <p class="text-sm font-semibold">Connections</p>
+            <p class="text-xs text-gray-500">100%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEGEND -->
+      <div class="mt-8 space-y-2 text-sm">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-blue-900"></span>
+          <span>Interns – 45%</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+          <span>Mentors – 35%</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-blue-300"></span>
+          <span>Recruiters – 20%</span>
+        </div>
+      </div>
+
+     <a
+  href="network.html"
+  class="mt-8 mx-40 block text-xs bg-blue-900 text-white px-4 py-2 rounded text-center hover:bg-blue-800 transition"
+>
+  Reach out for more!
+</a>
+
+    </div>
+
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-[#0f2a44] text-white text-center py-10">
+  <p class="font-semibold mb-2">Ready to find your ideal internship?</p>
+  <p class="text-xs mb-4">
+    Join the thousands of students who have already landed their internships with InternEase.
+  </p>
+  <button class="bg-white text-[#0f2a44] px-6 py-2 rounded text-sm font-medium">
+    Create an Account
+  </button>
+
+  <p class="text-xs mt-6 opacity-70">
+    © 2025 InternEase. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
