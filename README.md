@@ -25,11 +25,10 @@
 ## Links
 <ul>
   <li>
-    
-<a href="https://www.figma.com/design/yPvKQ0WszCd3ikiwF0Tlpw/Mid-avance?node-id=142-14&t=ZWh7fsxtHTdplRFQ-1">**Figma**</a>
+    <a href="https://www.figma.com/design/yPvKQ0WszCd3ikiwF0Tlpw/Mid-avance?node-id=142-14&t=ZWh7fsxtHTdplRFQ-1">Figma</a>
   </li>
   <li>
-<a href="ui-ux-4twin5.vercel.app">**Vercel**</a>
-    
+    <a href="ui-ux-4twin5.vercel.app">Vercel</a>
   </li>
 </ul>
+
