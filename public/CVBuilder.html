@@ -9,6 +9,290 @@
 
   <!-- Tailwind + styles principaux -->
   <link rel="stylesheet" href="./style.css">
+  
+  <!-- CV Builder Styles -->
+  <style>
+    /* Tabs */
+    .tabs-container {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-top: 24px;
+    }
+    
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      color: #454545;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    
+    .tab.active {
+      color: #1a3d64;
+      border-bottom-color: #1a3d64;
+      font-weight: 600;
+    }
+    
+    .tab:hover {
+      color: #1a3d64;
+    }
+    
+    /* CV Wrapper */
+    .cv-wrapper {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    
+    .cv-container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    /* Steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 20px;
+    }
+    
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: #454545;
+    }
+    
+    .step.active {
+      color: #1a3d64;
+      font-weight: 600;
+    }
+    
+    .step.active .number {
+      background-color: #1a3d64;
+      color: white;
+      border: 2px solid #1a3d64;
+    }
+    
+    .step .number {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 50%;
+      background-color: transparent;
+      color: #454545;
+      border: 2px solid #454545;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    /* CV Card */
+    .cv-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+    
+    .cv-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    
+    .form-actions {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    
+    /* Photo Upload */
+    .photo-upload {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .circle-upload {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px dashed #cfcfcf;
+      margin: 16px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fafafa;
+      transition: all 0.2s;
+    }
+    
+    .circle-upload:hover {
+      border-color: #1a3d64;
+      background-color: #f0f7ff;
+    }
+    
+    .circle-upload svg {
+      opacity: 0.6;
+    }
+    
+    .upload-btn {
+      background: none;
+      border: none;
+      color: #1a3d64;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px;
+      margin-top: 8px;
+    }
+    
+    .upload-btn:hover {
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: #0c2b4e;
+      color: white;
+      padding: 40px 24px;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-center {
+      text-align: center;
+    }
+    
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    /* Buttons */
+    .btn-primary {
+      background-color: #1a3d64;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 24px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    
+    .btn-primary:hover {
+      background-color: #15304f;
+    }
+    
+    .btn-outline {
+      background-color: white;
+      color: #1a3d64;
+      border: 1px solid #1a3d64;
+      border-radius: 6px;
+      padding: 10px 24px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    
+    .btn-outline:hover {
+      background-color: #f0f7ff;
+    }
+    
+    /* Form Group */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .form-group label {
+      font-size: 12px;
+      color: #454545;
+      font-weight: 500;
+    }
+    
+    .form-group input {
+      border: 1px solid #dcdcdc;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: #1a3d64;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cv-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .cv-form {
+        grid-template-columns: 1fr;
+      }
+      
+      .photo-upload {
+        grid-column: 1;
+        grid-row: auto;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+      }
+      
+      .footer-right {
+        align-items: center;
+      }
+      
+      .steps {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+      
+      .step {
+        white-space: nowrap;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-neutrallight font-sans">
@@ -35,13 +319,17 @@
 <!-- ================= PAGE TITLE ================= -->
 <section class="page-title">
   <h2 class="text-h2 text-primary mt-10">CV &amp; Cover Letter Builder</h2>
+  
+  <!-- ===== TABS ===== -->
+  <div class="tabs-container mt-6">
+    <button class="tab active">CV Builder</button>
+    <button class="tab">Cover Letter Builder</button>
+  </div>
 </section>
 
 <!-- ================= MAIN CONTENT ================= -->
 <main class="cv-wrapper">
-
-  <div class="card cv-card">
-
+  <div class="cv-container">
     <!-- ===== STEPS ===== -->
     <aside class="steps">
       <div class="step active">
@@ -49,67 +337,94 @@
         <span>Personal Info</span>
       </div>
       <div class="step">
-        <span>2</span>
+        <span class="number">2</span>
         <span>Experience</span>
       </div>
       <div class="step">
-        <span>3</span>
+        <span class="number">3</span>
         <span>Education</span>
       </div>
       <div class="step">
-        <span>4</span>
+        <span class="number">4</span>
         <span>Skills</span>
       </div>
     </aside>
 
-    <!-- ===== FORM ===== -->
-    <section class="grid grid-cols-2 gap-6">
-
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Enter your full name">
-      </div>
-
-      <!-- PHOTO -->
-      <div class="photo-upload row-span-3 flex flex-col items-center justify-center">
-        <p class="font-semibold mb-2 text-sm">Photo de Profil (Optionnel)</p>
-        <div class="circle">
-          📷
+    <!-- ===== FORM CARD ===== -->
+    <div class="card cv-card">
+      <section class="cv-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Enter your full name">
         </div>
-        <button type="button" class="mt-4 text-primary text-sm font-semibold flex items-center gap-2">
-          <span>Uploader une image</span>
-        </button>
-        <p class="text-neutraldark text-caption mt-2">JPG, PNG (max 5MB)</p>
-      </div>
 
-      <div class="form-group">
-        <label for="phone">Phone</label>
-        <input id="phone" type="text" placeholder="+216 00 000 000">
-      </div>
+        <!-- PHOTO -->
+        <div class="photo-upload">
+          <p class="font-semibold mb-2 text-sm">Photo de Profil (Optionnel)</p>
+          <div class="circle-upload">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 4H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" stroke="#1a3d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z" stroke="#1a3d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <button type="button" class="upload-btn">
+            <span>Uploader une image</span>
+          </button>
+          <p class="text-neutraldark text-caption mt-2">JPG, PNG (max 5MB, ratio 1:1)</p>
+        </div>
 
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input id="email" type="email" placeholder="example@domain.com">
-      </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" placeholder="+216 00 000 000">
+        </div>
 
-      <div class="form-group">
-        <label for="linkedin">LinkedIn</label>
-        <input id="linkedin" type="text" placeholder="linkedin.com/in/yourprofile">
-      </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="example@domain.com">
+        </div>
 
-      <!-- ===== ACTIONS ===== -->
-      <div class="col-span-2 flex justify-end gap-4 mt-6">
-        <button class="btn-outline">Back</button>
-        <a href="FeedbackForm.html" class="btn-primary inline-block text-center">Next</a>
-      </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn</label>
+          <input id="linkedin" type="text" placeholder="linkedin.com/in/yourprofile">
+        </div>
 
-    </section>
+        <!-- ===== ACTIONS ===== -->
+        <div class="form-actions">
+          <button class="btn-outline">Back</button>
+          <button class="btn-primary">Next</button>
+        </div>
+      </section>
+    </div>
   </div>
 </main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer mt-16">
-  © 2025 InternEase. All rights reserved.
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="flex gap-2.5 mb-4">
+        <img src="./assets/Logo.svg" alt="InternEase" />
+        <p class="font-bold text-h2">InternEase</p>
+      </div>
+      <div class="flex gap-5 text-caption">
+        <p class="cursor-pointer">Privacy Policy</p>
+        <p>|</p>
+        <p class="cursor-pointer">Our History</p>
+        <p>|</p>
+        <p class="cursor-pointer">What We Do</p>
+      </div>
+    </div>
+    <div class="footer-center">
+      <p class="text-caption">© 2025 InternEase. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <div class="flex gap-2 items-center">
+        <img src="./assets/phone.png" alt="phone" />
+        <img src="./assets/facebook.png" alt="facebook" />
+      </div>
+      <p class="text-caption mt-2">2025 All rights reserved</p>
+    </div>
+  </div>
 </footer>
 
 </body>

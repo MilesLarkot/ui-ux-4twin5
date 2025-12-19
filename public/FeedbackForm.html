@@ -12,9 +12,285 @@
 
     <!-- Tailwind + styles principaux -->
     <link rel="stylesheet" href="./style.css" />
+    
+    <!-- Feedback Form Styles -->
+    <style>
+      /* Feedback Wrapper */
+      .feedback-wrapper {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 24px;
+      }
+      
+      .feedback-container {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Sidebar */
+      .feedback-sidebar {
+        background-color: #1a3d64;
+        color: white;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .feedback-bar {
+        width: 100%;
+        height: 60px;
+        background-color: #DFF1FD;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      
+      .feedback-bubble {
+        background-color: white;
+        color: #1a3d64;
+        padding: 20px 30px;
+        border-radius: 20px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      
+      .feedback-bubble::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid white;
+      }
+      
+      .feedback-bubble-text {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a3d64;
+        margin: 0;
+        text-align: center;
+      }
+      
+      .feedback-sidebar-text {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+      }
+      
+      /* Form Section */
+      .feedback-form-section {
+        background-color: white;
+        padding: 40px;
+      }
+      
+      .feedback-form-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      
+      /* Form Group with Icon */
+      .form-group-with-icon {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      
+      .form-icon {
+        margin-top: 28px;
+        flex-shrink: 0;
+      }
+      
+      .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .form-group label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #454545;
+      }
+      
+      .form-input,
+      .form-textarea {
+        border: 1px solid #dcdcdc;
+        border-radius: 6px;
+        padding: 10px 12px;
+        font-size: 14px;
+        font-family: inherit;
+        width: 100%;
+      }
+      
+      .form-input:focus,
+      .form-textarea:focus {
+        outline: none;
+        border-color: #1a3d64;
+      }
+      
+      .form-textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      
+      .score-input {
+        width: 80px;
+      }
+      
+      /* Rating Options */
+      .rating-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 8px;
+      }
+      
+      .rating-option {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: #454545;
+        cursor: pointer;
+      }
+      
+      .rating-option input[type="radio"] {
+        cursor: pointer;
+      }
+      
+      /* Warning Message */
+      .warning-message {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #c0392b;
+        font-size: 12px;
+        margin-top: 8px;
+      }
+      
+      /* Form Actions */
+      .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #e5e5e5;
+      }
+      
+      .btn-previous {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #DFF1FD;
+        color: #1a3d64;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      
+      .btn-previous:hover {
+        background-color: #c5e3f8;
+      }
+      
+      .btn-submit {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #1a3d64;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      
+      .btn-submit:hover {
+        background-color: #15304f;
+      }
+      
+      /* Footer */
+      .footer {
+        background-color: #0c2b4e;
+        color: white;
+        padding: 40px 24px;
+        margin-top: 60px;
+      }
+      
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+      
+      .footer-left {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .footer-center {
+        text-align: center;
+      }
+      
+      .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      
+      /* Responsive */
+      @media (max-width: 968px) {
+        .feedback-container {
+          grid-template-columns: 1fr;
+        }
+        
+        .feedback-sidebar {
+          padding: 40px 30px;
+        }
+        
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          text-align: center;
+        }
+        
+        .footer-right {
+          align-items: center;
+        }
+      }
+    </style>
   </head>
 
-  <body class="bg-[#DFF1FD] font-sans">
+  <body class="bg-neutrallight font-sans">
     <!-- ================= NAVBAR ================= -->
     <header
       class="h-[57px] w-full bg-primary flex justify-between items-center text-neutrallight px-6 py-[15px]"
@@ -49,95 +325,104 @@
 
     <!-- ================= MAIN CONTENT ================= -->
     <main class="feedback-wrapper">
-      <div class="feedback-card grid grid-cols-3 gap-0">
+      <div class="feedback-container">
         <!-- Colonne gauche -->
-        <aside
-          class="feedback-sidebar col-span-1 text-white flex flex-col items-center justify-center px-8 py-16"
-        >
-          <div
-            class="feedback-image-box w-[220px] h-[220px] flex items-center justify-center mb-8"
-          >
-            <img
-              src="./assets/feedback.png"
-              alt="We want your feedback"
-              class="w-full h-full object-cover"
-            />
+        <aside class="feedback-sidebar">
+          <div class="feedback-bar"></div>
+          <div class="feedback-bubble">
+            <p class="feedback-bubble-text">WE WANT YOUR FEEDBACK</p>
           </div>
-          <p class="text-caption text-center">
+          <p class="feedback-sidebar-text">
             Votre expérience nous est précieuse pour améliorer notre plateforme
             et aider les futurs stagiaires.
           </p>
         </aside>
 
         <!-- Colonne droite : formulaire -->
-        <section class="col-span-2 bg-white px-10 py-10">
-          <div class="space-y-6">
+        <section class="feedback-form-section">
+          <div class="feedback-form-content">
             <!-- Catégorie -->
-            <div class="form-group">
-              <label for="category">Catégorie de Feedback</label>
-              <select
-                id="category"
-                class="border border-[#dcdcdc] rounded-md px-3 py-2 text-sm"
-              >
-                <option>Choisissez un sujet</option>
-                <option>Plateforme</option>
-                <option>Processus de candidature</option>
-                <option>Offres de stage</option>
-                <option>Autre</option>
-              </select>
+            <div class="form-group-with-icon">
+              <div class="form-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" stroke="#1a3d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="7" cy="7" r="1.5" fill="#1a3d64"/>
+                </svg>
+              </div>
+              <div class="form-group">
+                <label for="category">Catégorie de Feedback</label>
+                <input
+                  id="category"
+                  type="text"
+                  placeholder="Choisissez un sujet"
+                  class="form-input"
+                />
+              </div>
             </div>
 
             <!-- Question 1 -->
-            <div class="form-group">
-              <label for="q1">Qu’avez-vous le plus aimé dans votre stage ?</label>
-              <textarea
-                id="q1"
-                rows="3"
-                placeholder="Partagez votre expérience positive..."
-                class="border border-[#dcdcdc] rounded-md px-3 py-2 text-sm resize-y"
-              ></textarea>
+            <div class="form-group-with-icon">
+              <div class="form-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" stroke="#1a3d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="form-group">
+                <label for="q1">Qu'avez-vous le plus aimé dans votre stage ?</label>
+                <textarea
+                  id="q1"
+                  rows="4"
+                  placeholder="Partagez votre expérience positive..."
+                  class="form-textarea"
+                ></textarea>
+              </div>
             </div>
 
             <!-- Question 2 -->
-            <div class="form-group">
-              <label for="q2">Que pouvons-nous améliorer ?</label>
-              <textarea
-                id="q2"
-                rows="3"
-                placeholder="Vos suggestions..."
-                class="border border-[#dcdcdc] rounded-md px-3 py-2 text-sm resize-y"
-              ></textarea>
+            <div class="form-group-with-icon">
+              <div class="form-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="#1a3d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="form-group">
+                <label for="q2">Que pouvons-nous améliorer ?</label>
+                <textarea
+                  id="q2"
+                  rows="4"
+                  placeholder="Vos suggestions..."
+                  class="form-textarea"
+                ></textarea>
+              </div>
             </div>
 
             <!-- Note expérience -->
-            <div class="form-group">
-              <label>Notez votre expérience de stage</label>
-              <div class="mt-2 space-y-2 text-sm">
-                <div class="rating-row-top">
-                  <label for="rate1" class="flex items-center gap-2">
+            <div class="form-group-with-icon">
+              <div class="form-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#1a3d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="form-group">
+                <label>Notez votre expérience de stage</label>
+                <div class="rating-options">
+                  <label for="rate1" class="rating-option">
                     <input type="radio" id="rate1" name="experience" />
                     <span>1 - Poor</span>
                   </label>
-                  <label for="rate2" class="flex items-center gap-2">
+                  <label for="rate2" class="rating-option">
                     <input type="radio" id="rate2" name="experience" />
                     <span>2 - Fair</span>
                   </label>
-                  <label for="rate3" class="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      id="rate3"
-                      name="experience"
-                      checked
-                    />
+                  <label for="rate3" class="rating-option">
+                    <input type="radio" id="rate3" name="experience" checked />
                     <span>3 - Good</span>
                   </label>
-                  <label for="rate4" class="flex items-center gap-2">
+                  <label for="rate4" class="rating-option">
                     <input type="radio" id="rate4" name="experience" />
                     <span>4 - Very Good</span>
                   </label>
-                </div>
-                <div class="rating-row-bottom">
-                  <label for="rate5" class="flex items-center gap-2">
+                  <label for="rate5" class="rating-option">
                     <input type="radio" id="rate5" name="experience" />
                     <span>5 - Excellent</span>
                   </label>
@@ -146,34 +431,67 @@
             </div>
 
             <!-- Score sur 10 -->
-            <div class="form-group">
-              <label for="score">Score sur 10 (Recommandation)</label>
-              <input
-                id="score"
-                type="number"
-                min="0"
-                max="10"
-                value="8"
-                class="w-20"
-              />
-              <p class="text-caption text-[#c0392b] mt-1">
-                Une note élevée augmente la visibilité du stage.
-              </p>
+            <div class="form-group-with-icon">
+              <div class="form-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="18" y1="20" x2="18" y2="10" stroke="#1a3d64" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="12" y1="20" x2="12" y2="4" stroke="#1a3d64" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="6" y1="20" x2="6" y2="14" stroke="#1a3d64" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="form-group">
+                <label for="score">Score sur 10 (Recommandation)</label>
+                <input
+                  id="score"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="8"
+                  class="form-input score-input"
+                />
+                <p class="warning-message">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="12" y1="9" x2="12" y2="13" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  Une note élevée augmente la visibilité du stage.
+                </p>
+              </div>
             </div>
 
             <!-- Date -->
-            <div class="form-group">
-              <label for="date">Date de Soumission</label>
-              <input id="date" type="date" />
+            <div class="form-group-with-icon">
+              <div class="form-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="#1a3d64" stroke-width="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6" stroke="#1a3d64" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="8" y1="2" x2="8" y2="6" stroke="#1a3d64" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="3" y1="10" x2="21" y2="10" stroke="#1a3d64" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="form-group">
+                <label for="date">Date de Soumission</label>
+                <input id="date" type="date" value="2025-12-16" class="form-input" />
+              </div>
             </div>
           </div>
 
           <!-- Boutons -->
-          <div class="flex justify-end gap-4 mt-8">
-            <a href="CVBuilder.html" class="btn-outline inline-block text-center">
-              &lt; Précédent
+          <div class="form-actions">
+            <a href="CVBuilder.html" class="btn-previous">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Précédent
             </a>
-            <button class="btn-primary">Soumettre</button>
+            <button class="btn-submit">
+              Soumettre
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
         </section>
       </div>
@@ -181,7 +499,31 @@
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
-      © 2025 InternEase. All rights reserved.
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="flex gap-2.5">
+            <img src="./assets/Logo.svg" alt="InternEase" />
+            <p class="font-bold text-h2">InternEase</p>
+          </div>
+        </div>
+        <div class="footer-center">
+          <p class="text-caption">© 2025 InternEase. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <div class="flex gap-2 items-center">
+            <img src="./assets/phone.png" alt="phone" />
+            <img src="./assets/instagram.png" alt="instagram" />
+            <img src="./assets/facebook.png" alt="facebook" />
+          </div>
+          <div class="flex gap-5 text-caption mt-2">
+            <p class="cursor-pointer">Privacy Policy</p>
+            <p>|</p>
+            <p class="cursor-pointer">Our History</p>
+            <p>|</p>
+            <p class="cursor-pointer">What We Do</p>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
