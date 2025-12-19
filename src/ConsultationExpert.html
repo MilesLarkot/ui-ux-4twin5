@@ -1,219 +1,346 @@
 <!DOCTYPE html>
 <html lang="fr" class="h-full">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expert Consultation - InternEase</title>
-  <link href="../dist/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body class="min-h-screen flex flex-col bg-gray-200">
-
-  <!-- Navbar -->
-  <nav class="bg-primary text-white">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-      <div class="flex items-center space-x-10">
-        <div class="flex items-center space-x-3">
-          <img src="../public/assets/Logo.png" alt="logo" class="h-6 w-auto">
-          <span class="text-xl font-bold">InternEase</span>
-        </div>
-        <div class="hidden md:flex space-x-10 text-sm">
-          <a href="#" class="hover:text-teal-300">Internships</a>
-          <a href="#" class="hover:text-teal-300">Overview</a>
-          <a href="#" class="hover:text-teal-300">CV Builder</a>
-          <a href="#" class="text-teal-300 font-bold underline underline-offset-4">Dashboard</a>
-        </div>
-      </div>
-      <a href="#" class="text-sm hover:text-teal-300">Sign out</a>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="flex-1 max-w-7xl mx-auto px-6 py-12">
-
-    <!-- Titre -->
-    <h1 class="text-center text-5xl font-black text-primary mb-16">Expert Consultation</h1>
-
-    <!-- Profil Expert -->
-    <div class="bg-white rounded-3xl shadow-2xl p-12 mb-16 flex flex-col md:flex-row gap-12 items-start">
-      <img src="../public/assets/profil.png" alt="Nour Qahman" class="w-80 h-96 object-cover rounded-3xl shadow-2xl flex-shrink-0">
-      <div class="flex-1 pt-6">
-        <h2 class="text-5xl font-black text-primary mb-2">Nour Qahman</h2>
-        <p class="text-2xl font-bold text-teal-600 mb-6">Software Engineering Specialist</p>
-        <p class="text-lg text-gray-700 leading-relaxed">
-          Expert in designing, developing, and maintaining robust, scalable software solutions. 
-          Proficient in the full software development lifecycle, from concept and architecture 
-          to deployment and optimization.
-        </p>
-      </div>
-    </div>
-
-    <!-- Latest Articles -->
-    <section class="mb-20">
-      <div class="flex justify-between items-center mb-8">
-        <h2 class="text-4xl font-black text-primary">Latest Articles</h2>
-        <button class="bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700 transition shadow-lg text-lg">
-          View All Articles
-        </button>
-      </div>
-
-      <!-- Search + Filter -->
-      <div class="flex flex-col md:flex-row gap-8 mb-12">
-        <div class="flex-1 relative">
-          <input type="text" placeholder="Search......" 
-                 class="w-full pl-14 pr-6 py-5 text-lg border border-gray-300 rounded-2xl focus:outline-none focus:border-teal-600 bg-white">
-          <svg class="absolute left-5 top-1/2 -translate-y-1/2 w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-        </div>
-        <select class="px-8 py-5 text-lg border border-gray-300 rounded-2xl focus:outline-none focus:border-teal-600 bg-white">
-          <option>Select an option</option>
-        </select>
-      </div>
-
-      <!-- Articles Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition duration-300">
-          <img src="../public/assets/image.png" alt="TypeScript Article" class="w-full h-96 object-cover">
-          <div class="p-10">
-            <p class="text-gray-700 text-lg leading-relaxed mb-10">
-              TypeScript adds strong typing and better tooling to JavaScript, helping developers write cleaner and more maintainable code
-            </p>
-            <div class="flex justify-between">
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/share.png" alt="Share" class="w-10 h-10">
-              </button>
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/chat.png" alt="Comment" class="w-10 h-10">
-              </button>
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/like.png" alt="Like" class="w-10 h-10">
-              </button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expert Consultation - InternEase</title>
+    <link href="../dist/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col bg-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-primary text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16"
+      >
+        <div class="flex items-center space-x-10">
+          <div class="flex items-center space-x-3">
+            <img
+              src="../public/assets/Logo.png"
+              alt="logo"
+              class="h-6 w-auto"
+            />
+            <span class="text-xl font-bold">InternEase</span>
+          </div>
+          <div class="hidden md:flex space-x-10 text-sm">
+            <a href="#" class="hover:text-teal-300">Internships</a>
+            <a href="#" class="hover:text-teal-300">Overview</a>
+            <a href="#" class="hover:text-teal-300">CV Builder</a>
+            <a
+              href="#"
+              class="text-teal-300 font-bold underline underline-offset-4"
+              >Dashboard</a
+            >
           </div>
         </div>
+        <a href="#" class="text-sm hover:text-teal-300">Sign out</a>
+      </div>
+    </nav>
 
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition duration-300">
-          <img src="../public/assets/image.png" alt="TypeScript Article" class="w-full h-96 object-cover">
-          <div class="p-10">
-            <p class="text-gray-700 text-lg leading-relaxed mb-10">
-              TypeScript adds strong typing and better tooling to JavaScript, helping developers write cleaner and more maintainable code
-            </p>
-            <div class="flex justify-between">
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/share.png" alt="Share" class="w-10 h-10">
-              </button>
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/chat.png" alt="Comment" class="w-10 h-10">
-              </button>
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/like.png" alt="Like" class="w-10 h-10">
-              </button>
-            </div>
-          </div>
-        </div>
+    <!-- Main Content -->
+    <main class="flex-1 max-w-7xl mx-auto px-6 py-12">
+      <!-- Titre -->
+      <h1 class="text-center text-5xl font-black text-primary mb-16">
+        Expert Consultation
+      </h1>
 
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition duration-300">
-          <img src="../public/assets/image.png" alt="TypeScript Article" class="w-full h-96 object-cover">
-          <div class="p-10">
-            <p class="text-gray-700 text-lg leading-relaxed mb-10">
-              TypeScript adds strong typing and better tooling to JavaScript, helping developers write cleaner and more maintainable code
-            </p>
-            <div class="flex justify-between">
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/share.png" alt="Share" class="w-10 h-10">
-              </button>
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/chat.png" alt="Comment" class="w-10 h-10">
-              </button>
-              <button class="hover:opacity-70 transition">
-                <img src="../public/assets/like.png" alt="Like" class="w-10 h-10">
-              </button>
-            </div>
-          </div>
+      <!-- Profil Expert -->
+      <div
+        class="bg-white rounded-3xl shadow-2xl p-12 mb-16 flex flex-col md:flex-row gap-12 items-start"
+      >
+        <img
+          src="../public/assets/profil.png"
+          alt="Nour Qahman"
+          class="w-80 h-96 object-cover rounded-3xl shadow-2xl flex-shrink-0"
+        />
+        <div class="flex-1 pt-6">
+          <h2 class="text-5xl font-black text-primary mb-2">Nour Qahman</h2>
+          <p class="text-2xl font-bold text-teal-600 mb-6">
+            Software Engineering Specialist
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Expert in designing, developing, and maintaining robust, scalable
+            software solutions. Proficient in the full software development
+            lifecycle, from concept and architecture to deployment and
+            optimization.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- Question Section -->
-    <section class="bg-white rounded-3xl shadow-2xl p-12">
-      <div class="relative mb-12 h-24">
-        <!-- Titre "Question" augmenté -->
-        <h2 class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-black text-primary whitespace-nowrap">
-          Question
-        </h2>
-        <!-- Bouton à droite -->
-        <div class="flex justify-end h-full items-center">
-          <button class="bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700 transition shadow-lg text-lg">
-            Add Question
+      <!-- Latest Articles -->
+      <section class="mb-20">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-4xl font-black text-primary">Latest Articles</h2>
+          <button
+            class="bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700 transition shadow-lg text-lg"
+          >
+            View All Articles
           </button>
         </div>
+
+        <!-- Search + Filter -->
+        <div class="flex flex-col md:flex-row gap-8 mb-12">
+          <div class="flex-1 relative">
+            <input
+              type="text"
+              placeholder="Search......"
+              class="w-full pl-14 pr-6 py-5 text-lg border border-gray-300 rounded-2xl focus:outline-none focus:border-teal-600 bg-white"
+            />
+            <svg
+              class="absolute left-5 top-1/2 -translate-y-1/2 w-7 h-7 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+          <select
+            class="px-8 py-5 text-lg border border-gray-300 rounded-2xl focus:outline-none focus:border-teal-600 bg-white"
+          >
+            <option>Select an option</option>
+          </select>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div
+            class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition duration-300"
+          >
+            <img
+              src="../public/assets/image.png"
+              alt="TypeScript Article"
+              class="w-full h-96 object-cover"
+            />
+            <div class="p-10">
+              <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                TypeScript adds strong typing and better tooling to JavaScript,
+                helping developers write cleaner and more maintainable code
+              </p>
+              <div class="flex justify-between">
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/share.png"
+                    alt="Share"
+                    class="w-10 h-10"
+                  />
+                </button>
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/chat.png"
+                    alt="Comment"
+                    class="w-10 h-10"
+                  />
+                </button>
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/like.png"
+                    alt="Like"
+                    class="w-10 h-10"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition duration-300"
+          >
+            <img
+              src="../public/assets/image.png"
+              alt="TypeScript Article"
+              class="w-full h-96 object-cover"
+            />
+            <div class="p-10">
+              <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                TypeScript adds strong typing and better tooling to JavaScript,
+                helping developers write cleaner and more maintainable code
+              </p>
+              <div class="flex justify-between">
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/share.png"
+                    alt="Share"
+                    class="w-10 h-10"
+                  />
+                </button>
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/chat.png"
+                    alt="Comment"
+                    class="w-10 h-10"
+                  />
+                </button>
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/like.png"
+                    alt="Like"
+                    class="w-10 h-10"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition duration-300"
+          >
+            <img
+              src="../public/assets/image.png"
+              alt="TypeScript Article"
+              class="w-full h-96 object-cover"
+            />
+            <div class="p-10">
+              <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                TypeScript adds strong typing and better tooling to JavaScript,
+                helping developers write cleaner and more maintainable code
+              </p>
+              <div class="flex justify-between">
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/share.png"
+                    alt="Share"
+                    class="w-10 h-10"
+                  />
+                </button>
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/chat.png"
+                    alt="Comment"
+                    class="w-10 h-10"
+                  />
+                </button>
+                <button class="hover:opacity-70 transition">
+                  <img
+                    src="../public/assets/like.png"
+                    alt="Like"
+                    class="w-10 h-10"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Question Section -->
+      <section class="bg-white rounded-3xl shadow-2xl p-12">
+        <div class="relative mb-12 h-24">
+          <!-- Titre "Question" augmenté -->
+          <h2
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-black text-primary whitespace-nowrap"
+          >
+            Question
+          </h2>
+          <!-- Bouton à droite -->
+          <div class="flex justify-end h-full items-center">
+            <button
+              class="bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700 transition shadow-lg text-lg"
+            >
+              Add Question
+            </button>
+          </div>
+        </div>
+
+        <div class="space-y-10">
+          <div class="flex items-center gap-8">
+            <img
+              src="../public/assets/profil.png"
+              alt="user"
+              class="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            />
+            <div class="flex-1 bg-gray-200 h-16 rounded-full"></div>
+          </div>
+          <div class="flex items-center gap-8">
+            <img
+              src="../public/assets/profil.png"
+              alt="user"
+              class="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            />
+            <div class="flex-1 bg-gray-200 h-16 rounded-full"></div>
+          </div>
+          <div class="flex items-center gap-8">
+            <img
+              src="../public/assets/profil.png"
+              alt="user"
+              class="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            />
+            <div class="flex-1 bg-gray-200 h-16 rounded-full"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 mt-auto">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start text-sm"
+        >
+          <!-- Colonne gauche : Logo + Liens -->
+          <div class="flex flex-col items-start">
+            <div class="flex items-center space-x-3 mb-4">
+              <img
+                src="../public/assets/Logo.png"
+                alt="logo"
+                class="h-8 w-auto"
+              />
+              <span class="font-bold text-xl">InternEase</span>
+            </div>
+
+            <!-- Liens juste en dessous du logo/nom -->
+            <div class="flex items-center space-x-4 text-white/80">
+              <a href="#" class="hover:text-teal-300">Privacy Policy</a>
+              <span class="text-white/50"> | </span>
+              <a href="#" class="hover:text-teal-300">Our History</a>
+              <span class="text-white/50"> | </span>
+              <a href="#" class="hover:text-teal-300">What We Do</a>
+            </div>
+          </div>
+
+          <!-- Colonne droite : Icônes + Copyright -->
+          <div class="flex flex-col items-start md:items-end mt-8 md:mt-0">
+            <!-- Icônes sociales -->
+            <div class="flex space-x-8 mb-4">
+              <!-- Téléphone -->
+              <a href="#" class="hover:opacity-80 transition">
+                <img
+                  src="../public/assets/phone.png"
+                  alt="Phone"
+                  class="w-8 h-8"
+                />
+              </a>
+              <!-- Instagram -->
+              <a href="#" class="hover:opacity-80 transition">
+                <img
+                  src="../public/assets/instagram.png"
+                  alt="Instagram"
+                  class="w-8 h-8"
+                />
+              </a>
+              <!-- Facebook -->
+              <a href="#" class="hover:opacity-80 transition">
+                <img
+                  src="../public/assets/facebook.png"
+                  alt="Facebook"
+                  class="w-8 h-8"
+                />
+              </a>
+            </div>
+
+            <!-- Copyright sous les icônes avec un espace naturel -->
+            <span class="text-white/80">© 2025 All rights reserved</span>
+          </div>
+        </div>
       </div>
-
-      <div class="space-y-10">
-        <div class="flex items-center gap-8">
-          <img src="../public/assets/profil.png" alt="user" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
-          <div class="flex-1 bg-gray-200 h-16 rounded-full"></div>
-        </div>
-        <div class="flex items-center gap-8">
-          <img src="../public/assets/profil.png" alt="user" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
-          <div class="flex-1 bg-gray-200 h-16 rounded-full"></div>
-        </div>
-        <div class="flex items-center gap-8">
-          <img src="../public/assets/profil.png" alt="user" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
-          <div class="flex-1 bg-gray-200 h-16 rounded-full"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-<!-- Footer -->
-<footer class="bg-primary text-white py-8 mt-auto">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-start text-sm">
-      
-      <!-- Colonne gauche : Logo + Liens -->
-      <div class="flex flex-col items-start">
-        <div class="flex items-center space-x-3 mb-4">
-          <img src="../public/assets/Logo.png" alt="logo" class="h-8 w-auto">
-          <span class="font-bold text-xl">InternEase</span>
-        </div>
-        
-        <!-- Liens juste en dessous du logo/nom -->
-        <div class="flex items-center space-x-4 text-white/80">
-          <a href="#" class="hover:text-teal-300">Privacy Policy</a>
-          <span class="text-white/50"> | </span>
-          <a href="#" class="hover:text-teal-300">Our History</a>
-          <span class="text-white/50"> | </span>
-          <a href="#" class="hover:text-teal-300">What We Do</a>
-        </div>
-      </div>
-
-      <!-- Colonne droite : Icônes + Copyright -->
-<div class="flex flex-col items-start md:items-end mt-8 md:mt-0">
-  <!-- Icônes sociales -->
-  <div class="flex space-x-8 mb-4">
-    <!-- Téléphone -->
-    <a href="#" class="hover:opacity-80 transition">
-      <img src="../public/assets/phone.png" alt="Phone" class="w-8 h-8"/>
-    </a>
-    <!-- Instagram -->
-    <a href="#" class="hover:opacity-80 transition">
-      <img src="../public/assets/instagram.png" alt="Instagram" class="w-8 h-8"/>
-    </a>
-    <!-- Facebook -->
-    <a href="#" class="hover:opacity-80 transition">
-      <img src="../public/assets/facebook.png" alt="Facebook" class="w-8 h-8"/>
-    </a>
-  </div>
-
-  <!-- Copyright sous les icônes avec un espace naturel -->
-  <span class="text-white/80">© 2025 All rights reserved</span>
-</div>
-      
-    </div>
-  </div>
-</footer>
-
-</body>
+    </footer>
+  </body>
 </html>
